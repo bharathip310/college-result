@@ -1,0 +1,27 @@
+body {
+  font-family: Arial;
+  background: #f0f0f0;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#output {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}

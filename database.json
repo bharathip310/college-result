@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "roll": 1,
+      "name": "Student 1",
+      "marks": {
+        "tamil": 34,
+        "english": 32,
+        "maths": 63,
+        "science": 52,
+        "social": 5
+      }
+    },
+    {
+      "roll": 2,
+      "name": "Student 2",
+      "marks": {
+        "tamil": 14,
+        "english": 98,
+        "maths": 53,
+        "science": 91,
+        "social": 69
+      }
+    },
+    {
+      "roll": 3,
+      "name": "Student 3",
+      "marks": {
+        "tamil": 86,
+        "english": 13,
+        "maths": 27,
+        "science": 68,
+        "social": 30
+      }
+    },
+    {
+      "roll": 4,
+      "name": "Student 4",
+      "marks": {
+        "tamil": 77,
+        "english": 86,
+        "maths": 11,
+        "science": 89,
+        "social": 1
+      }
+    },
+    {
+      "roll": 5,
+      "name": "Student 5",
+      "marks": {
+        "tamil": 85,
+        "english": 41,
+        "maths": 71,
+        "science": 44,
+        "social": 71
+      }
+    },
+    {
+      "roll": 6,
+      "name": "Student 6",
+      "marks": {
+        "tamil": 97,
+        "english": 79,
+        "maths": 56,
+        "science": 68,
+        "social": 15
+      }
+    },
+    {
+      "roll": 7,
+      "name": "Student 7",
+      "marks": {
+        "tamil": 78,
+        "english": 42,
+        "maths": 94,
+        "science": 62,
+        "social": 15
+      }
+    },
+    {
+      "roll": 8,
+      "name": "Student 8",
+      "marks": {
+        "tamil": 22,
+        "english": 76,
+        "maths": 0,
+        "science": 20,
+        "social": 75
+      }
+    },
+    {
+      "roll": 9,
+      "name": "Student 9",
+      "marks": {
+        "tamil": 18,
+        "english": 62,
+        "maths": 83,
+        "science": 76,
+        "social": 27
+      }
+    },
+    {
+      "roll": 10,
+      "name": "Student 10",
+      "marks": {
+        "tamil": 22,
+        "english": 19,
+        "maths": 53,
+        "science": 38,
+        "social": 13
+      }
+    }
+  ]
+}
