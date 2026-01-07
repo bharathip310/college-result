@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
-// Create database adapter (use absolute path so it works regardless of cwd)
+// Create database adapter
 const adapter = new JSONFile(path.join(__dirname, "database.json"));
 const db = new Low(adapter, { results: [] });
 
@@ -19,7 +19,6 @@ async function initDB() {
   await db.read();
   db.data = db.data || { results: [] };
 
-  // If database is empty, add 10 sample students
   if (db.data.results.length === 0) {
     for (let i = 1; i <= 10; i++) {
       db.data.results.push({
@@ -41,9 +40,9 @@ async function initDB() {
   }
 }
 
-initDB();
+await initDB(); // top-level await works here in ESM
 
-// API : Get result by roll number
+// API: Get result by roll number
 app.get("/result/:roll", async (req, res) => {
   await db.read();
   const roll = parseInt(req.params.roll);
@@ -51,7 +50,6 @@ app.get("/result/:roll", async (req, res) => {
   const student = db.data.results.find((s) => s.roll === roll);
 
   if (student) {
-    // Calculate total & result
     const total =
       student.marks.tamil +
       student.marks.english +
@@ -73,7 +71,12 @@ app.get("/result/:roll", async (req, res) => {
   }
 });
 
-// Start Server
-app.listen(8080, () => {
-  console.log("✔ Server running at http://localhost:8080");
-});
+// Wrap ngrok + server start in an async function
+async function startServer() {
+  const PORT = 8080;
+  app.listen(PORT, () => {
+    console.log(`✔ Server running at http://localhost:${PORT}`);
+  });
+}
+
+startServer(); // call the async wrapper
